@@ -1,0 +1,20 @@
+const usersWithPosts = await prisma.user.findMany({
+  orderBy: [
+    {
+      role: 'desc',
+    },
+    {
+      name: 'desc',
+    },
+  ],
+  include: {
+    posts: {
+      orderBy: {
+        title: 'desc',
+      },
+      select: {
+        title: true,
+      },
+    },
+  },
+})

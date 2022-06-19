@@ -1,0 +1,167 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* @layer base {
+  "[type='text']",
+  "[type='email']",
+  "[type='url']",
+  "[type='password']",
+  "[type='number']",
+  "[type='date']",
+  "[type='datetime-local']",
+  "[type='month']",
+  "[type='search']",
+  "[type='tel']",
+  "[type='time']",
+  "[type='week']",
+  '[multiple]',
+  'textarea',
+  'select' {
+    @apply w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-200;
+  }
+} */
+
+@layer components {
+  .react_paginate {
+    @apply px-4 py-2 font-semibold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}
+
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+*/
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  @font-face {
+    font-family: Anjoman;
+    font-style: normal;
+    font-weight: 400;
+    src: local('َAnjoman'),
+      url('/fonts/Anjoman-FaNum-Regular.woff2') format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: AnjomanMedium;
+    font-style: normal;
+    font-weight: 500;
+    src: local('َAnjoman'),
+      url('/fonts/Anjoman-FaNum-Medium.woff2') format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: AnjomanSemiBold;
+    font-style: normal;
+    font-weight: 600;
+    src: local('َAnjoman'),
+      url('/fonts/Anjoman-FaNum-SemiBold.woff2') format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: AnjomanBold;
+    font-style: normal;
+    font-weight: 700;
+    src: local('َAnjoman'),
+      url('/fonts/Anjoman-FaNum-Bold.woff2') format('woff2');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: AnjomanEtraBold;
+    font-style: normal;
+    font-weight: 800;
+    src: local('َAnjoman'),
+      url('/fonts/Anjoman-FaNum-ExtraBold.woff2') format('woff2');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: AnjomanLight;
+    font-style: normal;
+    font-weight: 300;
+    src: local('َAnjoman'),
+      url('/fonts/Anjoman-FaNum-Light.woff2') format('woff2');
+    font-display: swap;
+  }
+  .paginationContainer {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-family: Anjoman;
+    }
+    li {
+      min-width: 2.1em;
+      text-align: center;
+      margin: 2px;
+      padding: 0px 2px;
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 14.6px;
+    }
+
+    .pagination {
+      list-style-type: none;
+      .pageLi {
+        /* background-color: red; */
+        /* width: 100%; */
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pageA {
+        display: block;
+        width: 100%;
+        /* background-color: red; */
+      }
+      .prevLi , .nextLi{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .treeDot {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        list-style-type: none;
+        color: #000;
+      }
+      .activePage {
+        background-color: #88aaff;
+      }
+    }
+    .tagliPage {
+      list-style-type: none;
+      
+    }
+    .tagLiEllipsis {
+      list-style-type: none;
+      width: 2rem;
+      height: 2rem;
+      /* width: 20px; */
+      color: #ff0;
+    }
+  }
+}
+
+body {
+  font-family: Anjoman, AnjomanLight, AnjomanMedium, AnjomanBold,
+    AnjomanSemiBold, AnjomanEtraBold, serif;
+  background-color: rgb(233, 235, 240);
+  /* background-image: linear-gradient(120deg, #effdff 0%, #a1d9ff 200%); */
+}
